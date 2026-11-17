@@ -2,5 +2,9 @@
 .idea/
 __pycache__/
 *.pyc
-data/
-*.joblib
+data/raw/
+data/processed/*
+!data/processed/patents_final.csv
+!data/processed/embeddings.npy
+!data/processed/duplicate_pairs.csv
+!data/processed/classifier_pipeline.joblib

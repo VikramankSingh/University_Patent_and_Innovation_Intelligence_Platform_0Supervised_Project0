@@ -1,0 +1,11 @@
+domain,top_terms
+Autonomous Systems & Mobility,"robot, vehicle, robotic, autonomous, surgical, control, location, driving"
+Clinical Decision Support,"patient, risk, disease, prediction, treatment, diagnosis, clinical, cancer"
+Drug Discovery & Genomics,"drug, generation, generating, sequence, methods, biomarkers, biomarker, gene"
+General ML & Data Methods,"data, learning, machine, model, training, storage, dataset, neural"
+Health Records & Operations,"medical, health, record, information, healthcare, text, entity, user"
+Language & Knowledge Systems,"text, question, language, answer, natural, speech, corpus, knowledge"
+Medical Imaging,"image, segmentation, images, imaging, medical, network, region, ultrasound"
+Networking & Hardware,"wireless, electronic, device, second, display, communication, housing, ue"
+Patient Monitoring & Wearables,"monitoring, sensor, patient, wearable, physiological, body, user, signal"
+Security & Privacy,"blockchain, security, privacy, data, user, access, encrypted, authentication"

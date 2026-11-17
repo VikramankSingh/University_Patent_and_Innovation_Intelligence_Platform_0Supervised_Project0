@@ -1,0 +1,61 @@
+=== 1. Raw data quality (scanning the raw CSV, takes a few minutes) ===
+Raw rows: 23,339
+  missing Patent ID: 0.0%
+  missing Title: 0.0%
+  missing Assignee: 0.0%
+  missing Priority Date: 0.0%
+  missing Publication Date: 0.0%
+  missing Abstract: 14.5%
+Cleaning funnel: 23,339 raw -> 19,300 patents kept (82.7%)
+
+=== 2. Class balance (weak labels from title keywords) ===
+  Other                                4169  (21.6%)
+  Medical Imaging                      4149  (21.5%)
+  Clinical Decision Support            2563  (13.3%)
+  General ML & Data Methods            2461  (12.8%)
+  Patient Monitoring & Wearables       1353  (7.0%)
+  Health Records & Operations          1293  (6.7%)
+  Drug Discovery & Genomics            1115  (5.8%)
+  Language & Knowledge Systems          634  (3.3%)
+  Networking & Hardware                 631  (3.3%)
+  Security & Privacy                    469  (2.4%)
+  Autonomous Systems & Mobility         463  (2.4%)
+Imbalance ratio (largest/smallest trainable class): 9.0x
+
+=== 3. Text length distributions and outliers ===
+Abstract length (words): mean=129, median=133, max=532
+Outliers above Q3+1.5*IQR (228 words): 144 (0.7%)
+
+=== 4. Patents over time ===
+Years: 2003-2024; peak year 2023 with 4,615 patents
+
+=== 5. Assignee concentration ===
+Distinct primary assignees: 6,002
+Top 15 assignees hold 20.0% of patents; #1 = international business machines (5.7%)
+
+=== 6. Correlations between numeric features (Spearman) ===
+                abstract_words  title_words  year  n_assignees  is_academic
+abstract_words            1.00         0.20  0.11         0.03        -0.11
+title_words               0.20         1.00  0.02         0.04        -0.00
+year                      0.11         0.02  1.00        -0.02        -0.07
+n_assignees               0.03         0.04 -0.02         1.00         0.20
+is_academic              -0.11        -0.00 -0.07         0.20         1.00
+
+=== 7. Most distinctive abstract words per domain (TF-IDF) ===
+  Autonomous Systems & Mobility: robot, vehicle, robotic, autonomous, surgical, control, location, driving
+  Clinical Decision Support: patient, risk, disease, prediction, treatment, diagnosis, clinical, cancer
+  Drug Discovery & Genomics: drug, generation, generating, sequence, methods, biomarkers, biomarker, gene
+  General ML & Data Methods: data, learning, machine, model, training, storage, dataset, neural
+  Health Records & Operations: medical, health, record, information, healthcare, text, entity, user
+  Language & Knowledge Systems: text, question, language, answer, natural, speech, corpus, knowledge
+  Medical Imaging: image, segmentation, images, imaging, medical, network, region, ultrasound
+  Networking & Hardware: wireless, electronic, device, second, display, communication, housing, ue
+  Patient Monitoring & Wearables: monitoring, sensor, patient, wearable, physiological, body, user, signal
+  Security & Privacy: blockchain, security, privacy, data, user, access, encrypted, authentication
+
+=== 8. Duplicates ===
+Overlap pairs (similarity >= 0.90): 971
+type
+Partial overlap                          434
+Same invention (likely patent family)    353
+Near-duplicate                           184

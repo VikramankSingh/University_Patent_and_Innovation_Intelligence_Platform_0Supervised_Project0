@@ -41,8 +41,9 @@ def load_data():
 
 @st.cache_resource
 def load_models():
-    clf = joblib.load(PROC / "classifier.joblib")
-    vec = joblib.load(PROC / "vectorizer.joblib")
+    pipe = joblib.load(PROC / "classifier_pipeline.joblib")
+    vec = pipe.named_steps["tfidf"]
+    clf = pipe.named_steps["clf"]
     encoder = SentenceTransformer("all-MiniLM-L6-v2")
     return clf, vec, encoder
 

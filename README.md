@@ -2,7 +2,8 @@
 
 Supervised Machine Learning course project (Project 18).
 
-**Live demo:** https://university-patent-intelligence.streamlit.app\n
+**Live demo:** https://university-patent-intelligence.streamlit.app
+
 **Dataset Link:** https://www.kaggle.com/datasets/karnikakapoor/ml-in-healthcare-patent-data 
 
 An end-to-end ML platform that turns unstructured patent text into searchable, analyzable knowledge: it classifies patents into technology domains, finds similar patents, clusters innovations, detects duplicate/overlapping filings, tracks trends and maps relationships between technology areas.

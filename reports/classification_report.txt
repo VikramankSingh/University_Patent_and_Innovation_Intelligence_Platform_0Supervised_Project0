@@ -1,0 +1,18 @@
+Model: TF-IDF + Logistic Regression (tuned)
+
+                                precision    recall  f1-score   support
+
+ Autonomous Systems & Mobility      0.622     0.656     0.639        93
+     Clinical Decision Support      0.694     0.565     0.623       513
+     Drug Discovery & Genomics      0.510     0.471     0.490       223
+     General ML & Data Methods      0.549     0.500     0.523       492
+   Health Records & Operations      0.526     0.583     0.553       259
+  Language & Knowledge Systems      0.548     0.717     0.621       127
+               Medical Imaging      0.806     0.859     0.832       829
+         Networking & Hardware      0.662     0.756     0.706       127
+Patient Monitoring & Wearables      0.583     0.557     0.570       271
+            Security & Privacy      0.538     0.677     0.600        93
+
+                      accuracy                          0.649      3027
+                     macro avg      0.604     0.634     0.616      3027
+                  weighted avg      0.649     0.649     0.647      3027

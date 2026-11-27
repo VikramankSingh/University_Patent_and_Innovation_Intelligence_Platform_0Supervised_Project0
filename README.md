@@ -8,7 +8,7 @@ Supervised Machine Learning course project (Project 18).
 
 An end-to-end ML platform that turns unstructured patent text into searchable, analyzable knowledge. It classifies patents into technology domains, finds similar patents, clusters innovations, detects duplicate and overlapping filings, tracks trends and maps relationships between technology areas. The deployed app, **Patent Atlas**, answers one question for researchers: *has someone already invented this?*
 
-**Team:** [Name 1], [Name 2], [Name 3]
+**Team:** Hrishikesh Bhowmick, Akash Nakyal, Vikramank Singh
 
 ---
 

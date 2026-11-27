@@ -45,7 +45,8 @@ EXAMPLES = {
 CSS = """
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap');
-html, body, [class*="st-"], .stMarkdown, p, label, li { font-family: 'Instrument Sans', sans-serif; }
+html, body, .stApp, .stMarkdown, p, label, li, button, textarea, input { font-family: 'Instrument Sans', sans-serif; }
+[data-testid="stIconMaterial"], .material-symbols-rounded, .material-icons { font-family: 'Material Symbols Rounded', 'Material Icons' !important; }
 .stApp {
   background-color: #0F2A4A;
   background-image: linear-gradient(rgba(92,200,255,.07) 1px, transparent 1px),

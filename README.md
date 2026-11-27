@@ -43,6 +43,26 @@ An end-to-end ML platform that turns unstructured patent text into searchable, a
 - **After cleaning:** 19,300 patents (2003-2024): English only, abstracts present and longer than 100 characters, duplicates by ID removed.
 - **Not included in this repo:** the raw CSV (too large). Download it from Kaggle and place it at `data/raw/patent_analysis_data.csv`. The processed files needed by the app are included in `data/processed/`.
 
+## Exploratory data analysis
+
+Full script: `src/eda.py`. Figures: `reports/eda/`.
+
+- **Missing values and cleaning:** only abstracts were missing (14.5% of 23,339 raw rows). After removing missing/short/non-English abstracts and duplicate IDs, 19,300 patents (82.7%) remain.
+- **Class imbalance:** largest/smallest trainable domain ratio is 9.0x (Medical Imaging 4,149 vs Autonomous Systems 463). Handled with stratified splits, class weights and macro-F1.
+- **Distributions and outliers:** abstracts average 129 words (median 133, max 532); only 0.7% exceed the IQR upper fence, so no outlier removal was applied.
+- **Correlations:** numeric features are weakly correlated (|rho| <= 0.20) and the data is mostly text, so modelling relies on NLP features rather than numeric ones.
+- **Assignees:** 6,002 distinct primary assignees; the top 15 hold 20% of patents (IBM 5.7%).
+- **Trends:** patents per year peak in 2023 (4,615); the latest year is incomplete because of publication lag.
+- **Text vs domain:** distinctive abstract words per domain are sensible (for example *segmentation, ultrasound* for imaging; *blockchain, encrypted* for security). Shared words such as *patient*, *data* and *user* appear across several domains, which explains many confusions.
+
+| Cleaning funnel | Class balance |
+|---|---|
+| ![Funnel](reports/eda/02_cleaning_funnel.png) | ![Class balance](reports/eda/03_class_balance.png) |
+
+| Abstract length by domain | Patents per year |
+|---|---|
+| ![Length](reports/eda/05_abstract_length_by_domain.png) | ![Per year](reports/eda/06_patents_per_year.png) |
+
 ## Methodology
 
 1. **Document processing:** keep title, assignee, dates and abstract; filter language and missing abstracts.
